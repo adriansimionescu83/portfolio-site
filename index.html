@@ -21,7 +21,7 @@
     }
   </style>
 </head>
-<body class="font-sans leading-relaxed">
+<body class="font-sans leading-relaxed bg-gray-100 text-gray-800">
   <div class="">
     <header class="flex justify-center gap-16items-start fade-in bg-gradient-to-r from-slate-500 to-slate-600 py-12 rounded-b-3xl text-white shadow-lg">
       <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 justify-between w-full">
@@ -42,41 +42,174 @@
 
     </header>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl font-semibold text-emerald-500 mb-4">About Me</h2>
+    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
+      <h2 class="text-3xl font-semibold text-slate-800">About Me</h2>
       <p>
-        I am a full stack developer with a strong foundation in Ruby on Rails and project delivery. I combine over a decade of experience in IT project coordination and consulting with hands-on coding skills, including developing and maintaining SaaS platforms. My work spans Ruby, JavaScript, Tailwind, PostgreSQL, and Microsoft Dynamics CRM.
+        I am a Full Stack Web Developer with a strong foundation in Ruby on Rails and experienced as a project delivery consultant. I combine over a decade of experience in IT project coordination and consulting with hands-on coding skills, including developing and maintaining SaaS platforms. My work spans Ruby on Rails, JavaScript, Tailwind, PostgreSQL, and Microsoft Dynamics CRM.
       </p>
     </section>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl font-semibold text-emerald-500 mb-4">Experience</h2>
+    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
+      <h2 class="text-3xl font-semibold text-slate-800">Experience</h2>
       <ul class="space-y-3">
-        <li><strong>Cobbai</strong> – Full Stack Developer (2022–Present)</li>
-        <li><strong>Dot.Cy Developments</strong> – Functional Consultant, Dynamics CRM (2018–2022)</li>
-        <li><strong>Advantage Software Factory</strong> – IT Business Analyst (2012–2016)</li>
-        <li><strong>Ipsos Interactive Services</strong> – Project Manager, Web Developer (2007–2012)</li>
+        <li>📍 <strong>Cobbai</strong> – Full Stack Developer (2022–Present)</li>
+        <li>📍 <strong>Dot.Cy Developments</strong> – Functional Consultant, Dynamics CRM (2018–2022)</li>
+        <li>📍 <strong>Advantage Software Factory</strong> – IT Business Analyst (2012–2016)</li>
+        <li>📍 <strong>Ipsos Interactive Services</strong> – Project Manager, Web Developer (2007–2012)</li>
       </ul>
     </section>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl font-semibold text-emerald-500 mb-6">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="bg-white p-4 shadow-md rounded-lg card">
-          <h3 class="font-bold text-xl text-emerald-600">BookMyBook.net</h3>
-          <p class="mt-1 text-sm text-gray-600">Marketplace for used books built in Ruby on Rails with real-time messaging.</p>
-          <a href="https://bookmybook.net" target="_blank" class="text-sm text-emerald-700 underline">Visit Project</a>
-        </div>
-        <div class="bg-white p-4 shadow-md rounded-lg card">
-          <h3 class="font-bold text-xl text-emerald-600">Troopl Portfolio</h3>
-          <p class="mt-1 text-sm text-gray-600">Online project showcase – see all my public work and contributions.</p>
-          <a href="https://troopl.com/simionescuadrian" target="_blank" class="text-sm text-emerald-700 underline">View Projects</a>
-        </div>
+    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
+      <h2 class="text-3xl font-semibold text-slate-800 mb-6">What I have been working on so far</h2>
+
+      <!-- Book my book -->
+      <div class="flex flex-col md:flex-row justify-center items-center w-full gap-8 h-102">
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
+          <figure class="h-96 w-full overflow-hidden">
+            <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1/book-my-book/production/reading_book.jpg?_a=BACADKDL" alt="BookMyBook" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
+          </figure>
+        </article>
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+          <!-- Content -->
+          <div class="">
+            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Book My Book</h3>
+            <p class="text-sm md:text-base">
+              A <strong>Ruby on Rails</strong> marketplace for buying and selling used books, designed to make reading affordable and sustainable.
+              <br><br>
+              <strong>Key Features:</strong>
+              <br>
+              • Real-time chat for direct buyer-seller communication
+              <br>
+              • Sustainable and cost-effective book reuse
+              <br>
+              • Seamless browsing, listing, and messaging experience
+              <br><br>
+              Built to combine technology with community impact.
+              <br><br>
+            </p>
+          </div>
+
+          <!-- Actions -->
+          <div class="px-6 py-4">
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              <a href="https://bookmybook.net" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+            </div>
+          </div>
+        </article>
       </div>
+
+      <!-- Vinyl Tube -->
+      <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
+          <figure class="h-96 w-full overflow-hidden">
+            <img src="https://images.pexels.com/photos/145707/pexels-photo-145707.jpeg" alt="Vinyl Tube" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
+          </figure>
+        </article>
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+          <!-- Content -->
+          <div class="p-8">
+            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Vinyl Tube</h3>
+            <p class="text-sm md:text-base overflow-y-auto max-h-56">
+              A platform <strong>built by vinyl lovers, for vinyl lovers</strong>, designed to simplify the discovery and collection of records.
+              <br><br>
+              <strong>Key Features:</strong>
+              <br>
+              • Aggregates listings from trusted sellers in one place
+              <br>
+              • Track, wishlist, and find rare pressings effortlessly
+              <br>
+              • Built for both casual collectors and dedicated audiophiles
+              <br>
+            </p>
+          </div>
+
+          <!-- Actions -->
+          <div class="px-6 py-4">
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              <a href="https://vinyl.tube" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- All Pot-->
+      <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
+          <figure class="h-96 w-full overflow-hidden">
+            <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg" alt="All Pot" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
+          </figure>
+        </article>
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+          <!-- Content -->
+          <div class="p-8">
+            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">AllPot</h3>
+            <p class="text-sm md:text-base overflow-y-auto max-h-56">
+              A <strong>sustainable recipe platform</strong> built during Le Wagon bootcamp with my team as a practice project.
+              <br><br>
+              <strong>Key features</strong>
+              <br>
+              • Fetches recipes via API based on your available ingredients
+              <br>
+              • Syncs your digital pantry and shopping list automatically
+              <br>
+              • Save and revisit favorite recipes with ease
+              <br>
+            </p>
+          </div>
+
+          <!-- Actions -->
+          <div class="px-6 py-4">
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              <a href="https://allpot.fly.dev/" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Pet my Pet -->
+      <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
+          <figure class="h-96 w-full overflow-hidden">
+            <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1645688759/pet-my-pet/z8uu0jsauv9ny1kqtsl6.jpg" alt="Pet my Pet" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
+          </figure>
+        </article>
+        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+          <!-- Content -->
+          <div class="p-8">
+            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Pet my Pet</h3>
+            <p class="text-sm md:text-base overflow-y-auto max-h-56">
+              A <strong>pet rental platform</strong> built during Le Wagon bootcamp as a practice project.
+              <br><br>
+              <strong>Key features</strong>
+              <br>
+              • Connects pet owners with local pet services and products
+              <br>
+              • Airbnb-like experience for renting pets
+              <br>
+              • Integrated with Mapbox for geocoding
+            </p>
+          </div>
+
+
+          <!-- Actions -->
+          <div class="px-6 py-4">
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              <a href="https://pet-my-pet.fly.dev/" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <span class="w-full text-center">... stay tuned for more to come ...</span>
+
     </section>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl font-semibold text-emerald-500 mb-4">Education</h2>
+    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
+      <h2 class="text-3xl font-semibold text-slate-800">Education</h2>
       <ul class="space-y-2">
         <li>📍 <strong>Le Wagon, Dubai</strong> – Full Stack Web Development (2022)</li>
         <li>📍 <strong>Astrolabs, Dubai</strong> – MERN Stack Bootcamp (2020)</li>
