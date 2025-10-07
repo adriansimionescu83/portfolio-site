@@ -35,7 +35,7 @@
           </div>
         </div>
         <div>
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQH_-GNzbOB9mw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728372309559?e=1761782400&v=beta&t=AX8x6CwSj5sXmdttuXuXFBC_IIbtAFVyyO-xI7VSBA0" alt="Adrian Simionescu" class="w-40 h-40 rounded-full border-4 border-white mt-6 mx-auto shadow-md"/>
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQEU_TdE_dfuyg/profile-displayphoto-scale_400_400/B4DZmbsxfVJEAg-/0/1759253830225?e=1762387200&v=beta&t=qKMwnQXy0LebVGWTld9fT0g62IseLlDvlQuKQk4OQ3U" alt="Adrian Simionescu" class="w-40 h-40 rounded-full border-4 border-white mt-6 mx-auto shadow-md"/>
         </div>
       </div>
 
@@ -62,38 +62,68 @@
     <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
       <h2 class="text-3xl font-semibold text-slate-800 mb-6">What I have been working on so far</h2>
 
+      <!-- Kickoff Sport Club -->
+      <div class="flex flex-col md:flex-row justify-center items-center w-full gap-8 h-102">
+        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
+          <figure class="h-96 w-full overflow-hidden">
+            <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1759518948/kickoff/h6va3np6vxe2w0ncqf7y4zrno91k.jpg" alt="Kickoff Sport Club" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
+          </figure>
+        </article>
+        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
+          <!-- Content -->
+          <div class="h-max-82 overflow-y-auto">
+            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Kickoff Sport Club</h3>
+            <p class="text-sm md:text-base">
+              A <strong>presentation website</strong> for showcasing Kickoff sport academy activities, built with <strong>Ruby on Rails</strong> and <strong>Tailwind CSS</strong> for a responsive and modern design.
+              <br><br>
+              <strong>Key Features:</strong>
+              <ul>
+                <li> •  Responsive design for optimal viewing on all devices</li>
+                <li> •  Dynamic content management for easy updates</li>
+                <li> •  Cloudinary integration for image management</li>
+              </ul>
+            </p>
+          </div>
+
+          <!-- Actions -->
+          <div class="px-6 pt-4 pb-8">
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              <a href="https://kickoffsportclub.com" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+
       <!-- Book my book -->
       <div class="flex flex-col md:flex-row justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
           <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
           <figure class="h-96 w-full overflow-hidden">
             <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1/book-my-book/production/reading_book.jpg?_a=BACADKDL" alt="BookMyBook" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
           </figure>
         </article>
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
           <!-- Content -->
-          <div class="">
+          <div class="h-max-82 overflow-y-auto">
             <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Book My Book</h3>
             <p class="text-sm md:text-base">
-              A <strong>Ruby on Rails</strong> marketplace for buying and selling used books, designed to make reading affordable and sustainable.
+              <strong>Online marketplace </strong>for reselling preloved books, designed to make reading affordable and sustainable.
               <br><br>
               <strong>Key Features:</strong>
-              <br>
-              • Real-time chat for direct buyer-seller communication
-              <br>
-              • Sustainable and cost-effective book reuse
-              <br>
-              • Seamless browsing, listing, and messaging experience
-              <br><br>
-              Built to combine technology with community impact.
-              <br><br>
+              <ul>
+                <li> •  Real-time chat functionality using web-sockets</li>
+                <li> •  Geolocation-based search powered by Mapbox</li>
+                <li> •  Image uploads and management with Cloudinary</li>
+              </ul>
             </p>
           </div>
 
           <!-- Actions -->
-          <div class="px-6 py-4">
+          <div class="px-6 pt-4 pb-8">
             <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://bookmybook.net" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+              <a href="https://bookmybook.net" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
             </div>
           </div>
         </article>
@@ -101,34 +131,32 @@
 
       <!-- Vinyl Tube -->
       <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
           <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
           <figure class="h-96 w-full overflow-hidden">
             <img src="https://images.pexels.com/photos/145707/pexels-photo-145707.jpeg" alt="Vinyl Tube" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
           </figure>
         </article>
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
           <!-- Content -->
-          <div class="p-8">
+          <div class="h-max-82 overflow-y-auto">
             <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Vinyl Tube</h3>
             <p class="text-sm md:text-base overflow-y-auto max-h-56">
               A platform <strong>built by vinyl lovers, for vinyl lovers</strong>, designed to simplify the discovery and collection of records.
               <br><br>
               <strong>Key Features:</strong>
-              <br>
-              • Aggregates listings from trusted sellers in one place
-              <br>
-              • Track, wishlist, and find rare pressings effortlessly
-              <br>
-              • Built for both casual collectors and dedicated audiophiles
-              <br>
+              <ul>
+                <li> • Aggregates listings from trusted sellers in one place </li>
+                <li> • Search functionality and wishlist management with notifications in place if a record becomes available</li>
+                <li> • User authentication and profile management using Devise</li>
+              </ul>
             </p>
           </div>
 
           <!-- Actions -->
-          <div class="px-6 py-4">
+          <div class="px-6 pt-4 pb-8">
             <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://vinyl.tube" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+              <a href="https://vinyl.tube" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
             </div>
           </div>
         </article>
@@ -136,34 +164,32 @@
 
       <!-- All Pot-->
       <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
           <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
           <figure class="h-96 w-full overflow-hidden">
             <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg" alt="All Pot" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
           </figure>
         </article>
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
           <!-- Content -->
-          <div class="p-8">
+          <div class="h-max-82 overflow-y-auto">
             <h3 class="text-2xl md:text-2xl mb-4 font-semibold">AllPot</h3>
             <p class="text-sm md:text-base overflow-y-auto max-h-56">
               A <strong>sustainable recipe platform</strong> built during Le Wagon bootcamp with my team as a practice project.
               <br><br>
               <strong>Key features</strong>
-              <br>
-              • Fetches recipes via API based on your available ingredients
-              <br>
-              • Syncs your digital pantry and shopping list automatically
-              <br>
-              • Save and revisit favorite recipes with ease
-              <br>
+              <ul>
+                <li> • Fetches recipes via API based on your available ingredients</li>
+                <li> • Syncs your digital pantry and shopping list automatically</li>
+                <li> • Save and revisit favorite recipes with ease</li>
+              </ul>
             </p>
           </div>
 
           <!-- Actions -->
-          <div class="px-6 py-4">
+          <div class="px-6 pt-4 pb-8">
             <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://allpot.fly.dev/" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+              <a href="https://allpot.fly.dev/" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
             </div>
           </div>
         </article>
@@ -171,34 +197,33 @@
 
       <!-- Pet my Pet -->
       <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
+        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
           <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
           <figure class="h-96 w-full overflow-hidden">
             <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1645688759/pet-my-pet/z8uu0jsauv9ny1kqtsl6.jpg" alt="Pet my Pet" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
           </figure>
         </article>
-        <article class="group rounded-xl overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 p-8">
+        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
           <!-- Content -->
-          <div class="p-8">
+          <div class="h-max-82 overflow-y-auto">
             <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Pet my Pet</h3>
             <p class="text-sm md:text-base overflow-y-auto max-h-56">
               A <strong>pet rental platform</strong> built during Le Wagon bootcamp as a practice project.
               <br><br>
               <strong>Key features</strong>
-              <br>
-              • Connects pet owners with local pet services and products
-              <br>
-              • Airbnb-like experience for renting pets
-              <br>
-              • Integrated with Mapbox for geocoding
+              <ul>
+                <li> • Connects pet owners with local pet services and products</li>
+                <li> • Airbnb-like experience for renting pets</li>
+                <li> • Integrated with Mapbox for geocoding</li>
+              </ul>
             </p>
           </div>
 
 
           <!-- Actions -->
-          <div class="px-6 py-4">
+          <div class="px-6 pt-4 pb-8">
             <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://pet-my-pet.fly.dev/" target="_blank" class="text-sm text-white bg-slate-700 border rounded-2xl px-6 py-2 cursor-pointer hover:bg-white hover:text-slate-500">Check it out</a>
+              <a href="https://pet-my-pet.fly.dev/" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
             </div>
           </div>
         </article>
