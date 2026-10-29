@@ -1,250 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adrian Simionescu – Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .fade-in {
-      animation: fadeIn 1s ease-in forwards;
-      opacity: 0;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adrian Simionescu – Portfolio</title>
+<meta name="description" content="Adrian Simionescu — Full Stack Developer (Ruby on Rails) and Dynamics CRM Functional Consultant based in Dubai, UAE." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236366f1%22/><text x=%2250%22 y=%2268%22 font-size=%2258%22 font-family=%22sans-serif%22 fill=%22white%22 text-anchor=%22middle%22>A</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
+  .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+  .fade-in-1 { animation-delay: .05s; }
+  .fade-in-2 { animation-delay: .15s; }
+  .fade-in-3 { animation-delay: .25s; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
-    .card:hover {
-      transform: scale(1.02);
-      transition: transform 0.3s ease;
-    }
-  </style>
+  .card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 35px -15px rgba(79,70,229,0.25); }
+
+  .timeline-item { position: relative; padding-left: 2rem; }
+  .timeline-item::before {
+    content: ""; position: absolute; left: 0; top: 0.35rem;
+    width: 0.65rem; height: 0.65rem; border-radius: 9999px;
+    background: #6366f1; box-shadow: 0 0 0 4px rgba(99,102,241,0.15);
+  }
+  .timeline-item::after {
+    content: ""; position: absolute; left: 0.3rem; top: 1.1rem; bottom: -1.5rem;
+    width: 1px; background: #e2e8f0;
+  }
+  .timeline-item:last-child::after { display: none; }
+
+  .clamp-4 {
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden;
+  }
+</style>
 </head>
-<body class="font-sans leading-relaxed bg-gray-100 text-gray-800">
-  <div class="">
-    <header class="flex justify-center gap-16items-start fade-in bg-gradient-to-r from-slate-500 to-slate-600 py-12 rounded-b-3xl text-white shadow-lg">
-      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 justify-between w-full">
-        <div class="rounded-2xl p-6 bg-slate-400 bg-opacity-50 text-center">
-          <h1 class="text-4xl font-bold">Adrian Simionescu</h1>
-          <p class="mt-2 text-lg">Full Stack Developer · Ruby on Rails · Dynamics Functional Consultant · Builder</p>
-          <div class="flex justify-center gap-6 items-center my-2">
-            <span> 📍 Dubai, UAE </span>
-            <a href="https://linkedin.com/in/adrian-simionescu" class="text-slate-300 hover:text-white underline">LinkedIn</a>
-            <a href="https://github.com/adriansimionescu83" class="text-slate-300 hover:text-white underline">GitHub</a>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#home" class="font-bold text-slate-800">Adrian Simionescu</a>
+      <div class="hidden sm:flex gap-6 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#experience" class="hover:text-indigo-600">Experience</a>
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#education" class="hover:text-indigo-600">Education</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </div>
+      <a href="#contact" class="text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-full px-4 py-2 transition">Get in touch</a>
+    </div>
+  </nav>
+
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Hero -->
+    <header id="home" class="fade-in mt-8 rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-600 via-indigo-700 to-slate-900 text-white shadow-xl">
+      <div class="px-8 py-14 md:py-20 flex flex-col md:flex-row items-center gap-10">
+
+        <!--
+          Logo/photo fix: the old <img> pointed at a LinkedIn CDN URL with a
+          signed, time-limited "e=" expiry parameter — it expired Nov 2025,
+          so the image now 404s for everyone. Replace the avatar below with
+          a self-hosted image (e.g. commit it to the repo as /assets/profile.jpg
+          or upload it to your Cloudinary account like the project screenshots)
+          and swap this placeholder <div> back for an <img src="..."> tag.
+        -->
+        <div class="w-36 h-36 md:w-40 md:h-40 rounded-full border-4 border-white/80 shadow-lg shrink-0 bg-indigo-400/40 flex items-center justify-center text-5xl font-bold text-white">
+          AS
+        </div>
+
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Adrian Simionescu</h1>
+          <p class="mt-3 text-lg text-indigo-100">Full Stack Developer · Ruby on Rails · Dynamics Functional Consultant · Builder</p>
+          <div class="mt-5 flex flex-wrap justify-center md:justify-start gap-4 text-sm">
+            <span class="inline-flex items-center gap-1 bg-white/10 rounded-full px-3 py-1.5">📍 Dubai, UAE</span>
+            <a href="https://linkedin.com/in/adrian-simionescu" target="_blank" class="inline-flex items-center gap-1 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition">LinkedIn</a>
+            <a href="https://github.com/adriansimionescu83" target="_blank" class="inline-flex items-center gap-1 bg-white/10 hover:bg-white/20 rounded-full px-3 py-1.5 transition">GitHub</a>
           </div>
         </div>
-        <div>
-          <img src="https://media.licdn.com/dms/image/v2/D4D03AQEU_TdE_dfuyg/profile-displayphoto-scale_400_400/B4DZmbsxfVJEAg-/0/1759253830225?e=1762387200&v=beta&t=qKMwnQXy0LebVGWTld9fT0g62IseLlDvlQuKQk4OQ3U" alt="Adrian Simionescu" class="w-40 h-40 rounded-full border-4 border-white mt-6 mx-auto shadow-md"/>
-        </div>
       </div>
-
-
     </header>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
-      <h2 class="text-3xl font-semibold text-slate-800">About Me</h2>
-      <p>
-        I am a Full Stack Web Developer with a strong foundation in Ruby on Rails and experienced as a project delivery consultant. I combine over a decade of experience in IT project coordination and consulting with hands-on coding skills, including developing and maintaining SaaS platforms. My work spans Ruby on Rails, JavaScript, Tailwind, PostgreSQL, and Microsoft Dynamics CRM.
+    <!-- About -->
+    <section id="about" class="fade-in fade-in-1 mt-10 p-8 md:p-12 rounded-2xl shadow-sm bg-white border border-slate-100">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-800">About Me</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed max-w-3xl">
+        I am a Full Stack Web Developer with a strong foundation in Ruby on Rails and experience as a project delivery consultant. I combine over a decade of experience in IT project coordination and consulting with hands-on coding skills, including developing and maintaining SaaS platforms. My work spans Ruby on Rails, JavaScript, Tailwind, PostgreSQL, and Microsoft Dynamics CRM.
       </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-full px-3 py-1.5">Ruby on Rails</span>
+        <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-full px-3 py-1.5">JavaScript</span>
+        <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-full px-3 py-1.5">Tailwind CSS</span>
+        <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-full px-3 py-1.5">PostgreSQL</span>
+        <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-full px-3 py-1.5">Microsoft Dynamics CRM</span>
+        <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 rounded-full px-3 py-1.5">Project Delivery</span>
+      </div>
     </section>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
-      <h2 class="text-3xl font-semibold text-slate-800">Experience</h2>
-      <ul class="space-y-3">
-        <li>📍 <strong>Cobbai</strong> – Full Stack Developer (2022–Present)</li>
-        <li>📍 <strong>Dot.Cy Developments</strong> – Functional Consultant, Dynamics CRM (2018–2022)</li>
-        <li>📍 <strong>Advantage Software Factory</strong> – IT Business Analyst (2012–2016)</li>
-        <li>📍 <strong>Ipsos Interactive Services</strong> – Project Manager, Web Developer (2007–2012)</li>
+    <!-- Experience -->
+    <section id="experience" class="fade-in fade-in-2 mt-10 p-8 md:p-12 rounded-2xl shadow-sm bg-white border border-slate-100">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Experience</h2>
+      <ul class="mt-8 space-y-6">
+        <li class="timeline-item">
+          <p class="font-semibold text-slate-800">Cobbai</p>
+          <p class="text-sm text-slate-500">Full Stack Developer · 2022 – Present</p>
+        </li>
+        <li class="timeline-item">
+          <p class="font-semibold text-slate-800">Dot.Cy Developments</p>
+          <p class="text-sm text-slate-500">Functional Consultant, Dynamics CRM · 2018 – 2022</p>
+        </li>
+        <li class="timeline-item">
+          <p class="font-semibold text-slate-800">Advantage Software Factory</p>
+          <p class="text-sm text-slate-500">IT Business Analyst · 2012 – 2016</p>
+        </li>
+        <li class="timeline-item">
+          <p class="font-semibold text-slate-800">Ipsos Interactive Services</p>
+          <p class="text-sm text-slate-500">Project Manager, Web Developer · 2007 – 2012</p>
+        </li>
       </ul>
     </section>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
-      <h2 class="text-3xl font-semibold text-slate-800 mb-6">What I have been working on so far</h2>
+    <!-- Projects -->
+    <section id="projects" class="fade-in fade-in-3 mt-10 p-8 md:p-12 rounded-2xl shadow-sm bg-white border border-slate-100">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-8">What I've been working on</h2>
 
-      <!-- Kickoff Sport Club -->
-      <div class="flex flex-col md:flex-row justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
-          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
-          <figure class="h-96 w-full overflow-hidden">
-            <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1759518948/kickoff/h6va3np6vxe2w0ncqf7y4zrno91k.jpg" alt="Kickoff Sport Club" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
-          </figure>
-        </article>
-        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
-          <!-- Content -->
-          <div class="h-max-82 overflow-y-auto">
-            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Kickoff Sport Club</h3>
-            <p class="text-sm md:text-base">
-              A <strong>presentation website</strong> for showcasing Kickoff sport academy activities, built with <strong>Ruby on Rails</strong> and <strong>Tailwind CSS</strong> for a responsive and modern design.
-              <br><br>
-              <strong>Key Features:</strong>
-              <ul>
-                <li> •  Responsive design for optimal viewing on all devices</li>
-                <li> •  Dynamic content management for easy updates</li>
-                <li> •  Cloudinary integration for image management</li>
-              </ul>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Kickoff Sport Club -->
+        <article class="card-hover rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 flex flex-col">
+          <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1759518948/kickoff/h6va3np6vxe2w0ncqf7y4zrno91k.jpg" alt="Kickoff Sport Club" class="h-56 w-full object-cover"/>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold text-slate-800">Kickoff Sport Club</h3>
+            <p class="mt-2 text-sm text-slate-600 clamp-4">
+              A presentation website for showcasing Kickoff sport academy activities, built with Ruby on Rails and Tailwind CSS for a responsive and modern design. Features dynamic content management and Cloudinary image integration.
             </p>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pt-4 pb-8">
-            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://kickoffsportclub.com" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Ruby on Rails</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Tailwind CSS</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Cloudinary</span>
             </div>
+            <a href="https://kickoffsportclub.com" target="_blank" class="mt-6 inline-flex items-center justify-center text-sm font-semibold text-white bg-slate-800 hover:bg-indigo-600 rounded-xl px-5 py-2.5 transition">Check it out →</a>
+          </div>
+        </article>
+
+        <!-- Book My Book -->
+        <article class="card-hover rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 flex flex-col">
+          <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1/book-my-book/production/reading_book.jpg?_a=BACADKDL" alt="BookMyBook" class="h-56 w-full object-cover"/>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold text-slate-800">Book My Book</h3>
+            <p class="mt-2 text-sm text-slate-600 clamp-4">
+              Online marketplace for reselling preloved books, designed to make reading affordable and sustainable. Features real-time chat over WebSockets and geolocation search powered by Mapbox.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">WebSockets</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Mapbox</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Cloudinary</span>
+            </div>
+            <a href="https://bookmybook.net" target="_blank" class="mt-6 inline-flex items-center justify-center text-sm font-semibold text-white bg-slate-800 hover:bg-indigo-600 rounded-xl px-5 py-2.5 transition">Check it out →</a>
+          </div>
+        </article>
+
+        <!-- Vinyl Tube -->
+        <article class="card-hover rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 flex flex-col">
+          <img src="https://images.pexels.com/photos/145707/pexels-photo-145707.jpeg" alt="Vinyl Tube" class="h-56 w-full object-cover"/>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold text-slate-800">Vinyl Tube</h3>
+            <p class="mt-2 text-sm text-slate-600 clamp-4">
+              A platform built by vinyl lovers, for vinyl lovers, designed to simplify the discovery and collection of records. Aggregates listings from trusted sellers with wishlist notifications and Devise-based auth.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Devise</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Search</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Notifications</span>
+            </div>
+            <a href="https://vinyl.tube" target="_blank" class="mt-6 inline-flex items-center justify-center text-sm font-semibold text-white bg-slate-800 hover:bg-indigo-600 rounded-xl px-5 py-2.5 transition">Check it out →</a>
+          </div>
+        </article>
+
+        <!-- AllPot -->
+        <article class="card-hover rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 flex flex-col">
+          <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg" alt="All Pot" class="h-56 w-full object-cover"/>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold text-slate-800">AllPot</h3>
+            <p class="mt-2 text-sm text-slate-600 clamp-4">
+              A sustainable recipe platform built during Le Wagon bootcamp with my team as a practice project. Fetches recipes via API based on available ingredients and syncs a digital pantry and shopping list.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">API Integration</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Ruby on Rails</span>
+            </div>
+            <a href="https://allpot.fly.dev/" target="_blank" class="mt-6 inline-flex items-center justify-center text-sm font-semibold text-white bg-slate-800 hover:bg-indigo-600 rounded-xl px-5 py-2.5 transition">Check it out →</a>
+          </div>
+        </article>
+
+        <!-- Pet my Pet -->
+        <article class="card-hover rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 flex flex-col md:col-span-2">
+          <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1645688759/pet-my-pet/z8uu0jsauv9ny1kqtsl6.jpg" alt="Pet my Pet" class="h-56 w-full object-cover"/>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-xl font-semibold text-slate-800">Pet my Pet</h3>
+            <p class="mt-2 text-sm text-slate-600 clamp-4">
+              A pet rental platform built during Le Wagon bootcamp as a practice project. Connects pet owners with local pet services in an Airbnb-like experience, integrated with Mapbox for geocoding.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Mapbox</span>
+              <span class="text-xs font-medium bg-white text-slate-600 border border-slate-200 rounded-full px-2.5 py-1">Ruby on Rails</span>
+            </div>
+            <a href="https://pet-my-pet.fly.dev/" target="_blank" class="mt-6 inline-flex items-center justify-center text-sm font-semibold text-white bg-slate-800 hover:bg-indigo-600 rounded-xl px-5 py-2.5 transition">Check it out →</a>
           </div>
         </article>
       </div>
 
-
-      <!-- Book my book -->
-      <div class="flex flex-col md:flex-row justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
-          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
-          <figure class="h-96 w-full overflow-hidden">
-            <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1/book-my-book/production/reading_book.jpg?_a=BACADKDL" alt="BookMyBook" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
-          </figure>
-        </article>
-        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
-          <!-- Content -->
-          <div class="h-max-82 overflow-y-auto">
-            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Book My Book</h3>
-            <p class="text-sm md:text-base">
-              <strong>Online marketplace </strong>for reselling preloved books, designed to make reading affordable and sustainable.
-              <br><br>
-              <strong>Key Features:</strong>
-              <ul>
-                <li> •  Real-time chat functionality using web-sockets</li>
-                <li> •  Geolocation-based search powered by Mapbox</li>
-                <li> •  Image uploads and management with Cloudinary</li>
-              </ul>
-            </p>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pt-4 pb-8">
-            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://bookmybook.net" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Vinyl Tube -->
-      <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
-          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
-          <figure class="h-96 w-full overflow-hidden">
-            <img src="https://images.pexels.com/photos/145707/pexels-photo-145707.jpeg" alt="Vinyl Tube" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
-          </figure>
-        </article>
-        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
-          <!-- Content -->
-          <div class="h-max-82 overflow-y-auto">
-            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Vinyl Tube</h3>
-            <p class="text-sm md:text-base overflow-y-auto max-h-56">
-              A platform <strong>built by vinyl lovers, for vinyl lovers</strong>, designed to simplify the discovery and collection of records.
-              <br><br>
-              <strong>Key Features:</strong>
-              <ul>
-                <li> • Aggregates listings from trusted sellers in one place </li>
-                <li> • Search functionality and wishlist management with notifications in place if a record becomes available</li>
-                <li> • User authentication and profile management using Devise</li>
-              </ul>
-            </p>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pt-4 pb-8">
-            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://vinyl.tube" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- All Pot-->
-      <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
-          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
-          <figure class="h-96 w-full overflow-hidden">
-            <img src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_41/3044956/191009-cooking-vegetables-al-1422.jpg" alt="All Pot" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
-          </figure>
-        </article>
-        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
-          <!-- Content -->
-          <div class="h-max-82 overflow-y-auto">
-            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">AllPot</h3>
-            <p class="text-sm md:text-base overflow-y-auto max-h-56">
-              A <strong>sustainable recipe platform</strong> built during Le Wagon bootcamp with my team as a practice project.
-              <br><br>
-              <strong>Key features</strong>
-              <ul>
-                <li> • Fetches recipes via API based on your available ingredients</li>
-                <li> • Syncs your digital pantry and shopping list automatically</li>
-                <li> • Save and revisit favorite recipes with ease</li>
-              </ul>
-            </p>
-          </div>
-
-          <!-- Actions -->
-          <div class="px-6 pt-4 pb-8">
-            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://allpot.fly.dev/" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Pet my Pet -->
-      <div class="flex flex-col md:flex-row flex-reverse justify-center items-center w-full gap-8 h-102">
-        <article class="group rounded-2xl overflow-hidden w-full md:w-1/2 h-102 transition-transform duration-300 hover:-translate-y-1">
-          <!-- Image (keeps a consistent height; change h-56 if you prefer) -->
-          <figure class="h-96 w-full overflow-hidden">
-            <img src="https://res.cloudinary.com/dfcr2srmr/image/upload/v1645688759/pet-my-pet/z8uu0jsauv9ny1kqtsl6.jpg" alt="Pet my Pet" class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"/>
-          </figure>
-        </article>
-        <article class="group overflow-hidden w-full md:w-1/2 h-96 flex flex-col justify-between rounded-2xl bg-slate-100 px-8 pt-8">
-          <!-- Content -->
-          <div class="h-max-82 overflow-y-auto">
-            <h3 class="text-2xl md:text-2xl mb-4 font-semibold">Pet my Pet</h3>
-            <p class="text-sm md:text-base overflow-y-auto max-h-56">
-              A <strong>pet rental platform</strong> built during Le Wagon bootcamp as a practice project.
-              <br><br>
-              <strong>Key features</strong>
-              <ul>
-                <li> • Connects pet owners with local pet services and products</li>
-                <li> • Airbnb-like experience for renting pets</li>
-                <li> • Integrated with Mapbox for geocoding</li>
-              </ul>
-            </p>
-          </div>
-
-
-          <!-- Actions -->
-          <div class="px-6 pt-4 pb-8">
-            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
-              <a href="https://pet-my-pet.fly.dev/" target="_blank" class="text-sm text-white bg-slate-600 border rounded-2xl px-6 py-2 cursor-pointer hover:shadow-md hover:bg-slate-800 hover:text-slate-100">Check it out</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <span class="w-full text-center">... stay tuned for more to come ...</span>
-
+      <p class="mt-8 text-center text-slate-400 text-sm">... stay tuned for more to come ...</p>
     </section>
 
-    <section class="mt-12 fade-in max-w-7xl mx-auto p-12 rounded-2xl shadow-lg bg-white flex flex-col gap-12">
-      <h2 class="text-3xl font-semibold text-slate-800">Education</h2>
-      <ul class="space-y-2">
-        <li>📍 <strong>Le Wagon, Dubai</strong> – Full Stack Web Development (2022)</li>
-        <li>📍 <strong>Astrolabs, Dubai</strong> – MERN Stack Bootcamp (2020)</li>
-        <li>📍 <strong>Bucharest University of Economic Studies</strong> – Management, Bachelor's (2007)</li>
+    <!-- Education -->
+    <section id="education" class="fade-in mt-10 p-8 md:p-12 rounded-2xl shadow-sm bg-white border border-slate-100">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Education</h2>
+      <ul class="mt-8 space-y-6">
+        <li class="timeline-item">
+          <p class="font-semibold text-slate-800">Le Wagon, Dubai</p>
+          <p class="text-sm text-slate-500">Full Stack Web Development · 2022</p>
+        </li>
+        <li class="timeline-item">
+          <p class="font-semibold text-slate-800">Astrolabs, Dubai</p>
+          <p class="text-sm text-slate-500">MERN Stack Bootcamp · 2020</p>
+        </li>
+        <li class="timeline-item">
+          <p class="font-semibold text-slate-800">Bucharest University of Economic Studies</p>
+          <p class="text-sm text-slate-500">Management, Bachelor's · 2007</p>
+        </li>
       </ul>
     </section>
 
-    <footer class="text-center mt-16 text-sm text-gray-500">
-      &copy; 2024 Adrian Simionescu · Built with Tailwind CSS
+    <!-- Contact / Footer -->
+    <footer id="contact" class="mt-10 mb-12 p-10 rounded-2xl bg-slate-900 text-center text-slate-300">
+      <h2 class="text-2xl font-bold text-white">Let's work together</h2>
+      <p class="mt-2 text-slate-400">Open to full stack and Dynamics CRM opportunities.</p>
+      <div class="mt-6 flex justify-center gap-4 flex-wrap">
+        <a href="https://linkedin.com/in/adrian-simionescu" target="_blank" class="bg-white/10 hover:bg-white/20 rounded-full px-5 py-2.5 text-sm font-semibold transition">LinkedIn</a>
+        <a href="https://github.com/adriansimionescu83" target="_blank" class="bg-white/10 hover:bg-white/20 rounded-full px-5 py-2.5 text-sm font-semibold transition">GitHub</a>
+      </div>
+      <p class="mt-8 text-xs text-slate-500">&copy; 2026 Adrian Simionescu · Built with Tailwind CSS</p>
     </footer>
+
   </div>
 </body>
 </html>
